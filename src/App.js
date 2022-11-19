@@ -8,30 +8,35 @@ function App() {
       id:'e1',
       title:'toilet Paper',
       amount: 94.12,
+      LocationOfExpenditure:'Store',
       date: new Date(2020,7,8),
     },
     {
       id:'e2',
       title:'Brush',
       amount: 74.12,
+      LocationOfExpenditure:'Store',
       date: new Date(2020,7,4),
     },
     {
       id:'el',
       title:'Paper',
       amount: 84.12,
+      LocationOfExpenditure:'Book Depo',
       date: new Date(2020,11,9),
     },
     {
       id:'e3',
       title:'Oil',
       amount: 99.12,
+      LocationOfExpenditure:'Ration shop',
       date: new Date(2020,7,14),
     },
     {
       id:'e4',
       title:'Reading Books',
       amount: 14.12,
+      LocationOfExpenditure:'library',
       date: new Date(2020,7,14),
     },
   ]
@@ -49,7 +54,7 @@ function App() {
            return(
             <>
             {console.log(data.title +","+data.amount + "data")}
-             <ExpenseItem title = {data.title} amount = {data.amount} date = {data.date} />
+             <ExpenseItem title = {data.title}  LocationOfExpenditure ={data.LocationOfExpenditure} amount = {data.amount} date = {data.date} />
             </>
            )
        })}
