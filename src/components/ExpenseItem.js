@@ -1,14 +1,27 @@
-function ExpenseItem(){
+import './ExpenseItem.css';
+
+function ExpenseItem(props){
+    // const expenseDate = new Date(2021, 2, 28);
+    // const expenseTitle = 'car Insurance';
+    // const expenseAmount = 294.67;
+    const LocationOfExpenditure  = 'car showRoom' //Added
+
     return (
         <>
-        <h1>Expense Items</h1>
         
-           <div>March 28th 2021</div>
+
+         <div className='expense-item'>
+           <div>{props.date.toLocaleDateString()}</div>
            
-           <div>
-            <h2>Car Insurance</h2>
-            <div>$294.67</div>
+            <div className='expense-item__description'>
+            <h2>{props.title}</h2>
+            {/* Added */}
+            <h2>{LocationOfExpenditure}</h2> 
+            <div className='expense-item__price'>${props.amount}</div>
+            </div>
            </div>
+
+
         </>
     )
 }
