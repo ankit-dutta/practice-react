@@ -1,9 +1,10 @@
 import ExpenseDate from './ExpenseDate';
 import ExpenseDetails from './ExpenseDetails'
+import Card from '../UI/Card';
 import './ExpenseItem.css';
 
 
-function ExpenseItem(props){
+const ExpenseItem = (props) => {
     // const expenseDate = new Date(2021, 2, 28);
     // const expenseTitle = 'car Insurance';
     // const expenseAmount = 294.67;
@@ -14,7 +15,7 @@ function ExpenseItem(props){
         <>
         
 
-         <div className='expense-item'>
+         <Card className='expense-item'>
            {/* <div>{props.date.toLocaleDateString()}</div> */}
           <ExpenseDate date = {props.date}/>
            
@@ -23,7 +24,7 @@ function ExpenseItem(props){
                 <ExpenseDetails title = {props.title} LocationOfExpenditure = {props.LocationOfExpenditure} amount = {props.amount} />
 
             </div>
-           </div>
+           </Card>
 
 
         </>

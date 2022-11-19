@@ -1,7 +1,7 @@
-import ExpenseDate from './ExpenseDate';
+import ExpenseDate from '../Expenses/ExpenseDate';
 import './ExpenseItem.css';
 
-function ExpenseDetail(props){
+const ExpenseDetail = (props)=>{
    const expenseTitle = props.title;
    const expenseLocationOfExpenditure = props.LocationOfExpenditure
    const expenseAmount = props.amount
