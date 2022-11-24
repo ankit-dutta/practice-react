@@ -1,4 +1,5 @@
 // import './App.css';
+
 // import ExpenseItem from './components/ExpenseItem';
 
 // function Expenses(props) {
@@ -55,9 +56,9 @@
 //             <>
 //             {console.log(data.title +","+data.amount + "data")}
 //             <Card className = "expenses">
-
-//              <ExpenseItem title = {data.title}  LocationOfExpenditure ={data.LocationOfExpenditure} amount = {data.amount} date = {data.date} />
-
+//                 <div className='expenses'>
+//                   <ExpenseItem id = {data.id} title = {data.title}  LocationOfExpenditure ={data.LocationOfExpenditure} amount = {data.amount} date = {data.date} />
+//                 </div>
 //              </Card>
 //             </>
 //            )

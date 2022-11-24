@@ -1,3 +1,5 @@
+import React, {useState} from 'react';
+
 import ExpenseDate from './ExpenseDate';
 import ExpenseDetails from './ExpenseDetails'
 import Card from '../UI/Card';
@@ -11,19 +13,39 @@ const ExpenseItem = (props) => {
    // const LocationOfExpenditure  = 'car showRoom' //Added
 
 
+   const [title, setTitle] = useState(props.title);
+//    const [del,setdel] = useState(props.id)
+
+   const clickHandler = () =>{
+    setTitle("changed");
+    console.log(title);
+   }
+
+//    const deletebtn = () =>{
+//      console.log("delete")
+//      console.log(props.id)
+//      const newid = del.filter((item)=>item.id !==id)
+//      setdel(newid)
+    
+     
+//    }
+
     return (
         <>
-        
-
+ 
          <Card className='expense-item'>
            {/* <div>{props.date.toLocaleDateString()}</div> */}
-          <ExpenseDate date = {props.date}/>
-           
-            <div className='expense-item__description'>
+            <ExpenseDate date = {props.date}/>
+            
+                    <div className='expense-item__description'>
 
-                <ExpenseDetails title = {props.title} LocationOfExpenditure = {props.LocationOfExpenditure} amount = {props.amount} />
+                        <ExpenseDetails title = {title} LocationOfExpenditure = {props.LocationOfExpenditure} amount = {props.amount} />
 
-            </div>
+                    </div>
+
+                <button onClick = {clickHandler}>Change Title</button>
+                {/* <button onClick={()=>deletebtn(props.id)}>delete</button> */}
+
            </Card>
 
 

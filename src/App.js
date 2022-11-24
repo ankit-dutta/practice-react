@@ -50,14 +50,19 @@ function App() {
        <ExpenseItem title = {expenses[2].title} amount = {expenses[2].amount} date = {expenses[2].date}></ExpenseItem>
        <ExpenseItem title = {expenses[3].title} amount = {expenses[3].amount} date = {expenses[3].date}></ExpenseItem> */}
 
+<div className='expenses'>
        {expenses.map((data)=>{
            return(
             <>
-            {console.log(data.title +","+data.amount + "data")}
-             <ExpenseItem title = {data.title}  LocationOfExpenditure ={data.LocationOfExpenditure} amount = {data.amount} date = {data.date} />
+            
+            {/* {console.log(data.title +","+data.amount + "data")} */}
+            
+             <ExpenseItem title = {data.title} id = {data.id} LocationOfExpenditure ={data.LocationOfExpenditure} amount = {data.amount} date = {data.date} />
+            
             </>
            )
        })}
+        </div>
 
     </div>
   );
